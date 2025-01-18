@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "310005680478",
+    "project_id": "parts-manager-ac7fb",
+    "storage_bucket": "parts-manager-ac7fb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310005680478:android:68db72b330269734cc67cf",
+        "android_client_info": {
+          "package_name": "ba.sum.fpmoz.parts_manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8X4cfwaSk9Kqlzm2mPXkEd_WQ6sS3JfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310005680478:android:8f4921811c047043cc67cf",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8X4cfwaSk9Kqlzm2mPXkEd_WQ6sS3JfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
