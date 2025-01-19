@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Poveži dugme iz MainActivity za LOGIN
-        Button loginButton = findViewById(R.id.button);  // Poveži dugme LOGIN (id button)
+        Button loginButton = findViewById(R.id.button);
 
         // Dodaj OnClickListener za dugme LOGIN
         loginButton.setOnClickListener(new View.OnClickListener() {
