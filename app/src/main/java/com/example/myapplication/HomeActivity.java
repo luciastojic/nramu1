@@ -7,7 +7,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home); // Zamijeni s imenom svog layouta
+        setContentView(R.layout.activity_home); // Povezivanje s XML layoutom (HomeActivity.xml)
     }
 }
-

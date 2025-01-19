@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -29,9 +28,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);  // Učitaj layout za login ekran
 
         mAuth = FirebaseAuth.getInstance();
+
         EditText editEmailText = findViewById(R.id.editEmailText);
         EditText editTextPassword = findViewById(R.id.editTextTextPassword);
-        progressBar = findViewById((R.id.progressBar));
+        progressBar = findViewById(R.id.progressBar);
         Button buttonLog = findViewById(R.id.button3);
 
         buttonLog.setOnClickListener(new View.OnClickListener() {
@@ -42,12 +42,12 @@ public class LoginActivity extends AppCompatActivity {
                 email = String.valueOf(editEmailText.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                if(TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)) {
                     Toast.makeText(LoginActivity.this, "Enter email", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(password)) {
                     Toast.makeText(LoginActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -58,13 +58,13 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
+                                    // Ako je prijava uspješna, preusmjeri na HomeActivity
                                     Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);  // Pokrećemo HomeActivity
                                     startActivity(intent);
-                                    finish();
+                                    finish();  // Završavamo LoginActivity, nećemo ga zadržati u pozadini
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
