@@ -39,6 +39,8 @@
         <activity android:name=".HomeActivity" android:exported="true" />
         <activity android:name=".ProfileActivity" android:exported="true"/>
         <activity android:name=".AddNewItemActivity" android:exported="true" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".EditProfileActivity" />
 
     </application>
 
