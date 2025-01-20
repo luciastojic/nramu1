@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -14,10 +18,11 @@ xmlns:tools="http://schemas.android.com/tools">
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
 
+
         <!-- RegisterActivity -->
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />  <!-- Možete postaviti na true ako želite omogućiti interakciju s vanjskim aplikacijama -->
+            android:exported="true" />
 
         <!-- MainActivity -->
         <activity
@@ -31,10 +36,10 @@ xmlns:tools="http://schemas.android.com/tools">
 
         <!-- LoginActivity -->
         <activity android:name=".LoginActivity" android:exported="true" />
+        <activity android:name=".HomeActivity" android:exported="true" />
+        <activity android:name=".ProfileActivity" android:exported="true"/>
+        <activity android:name=".AddNewItemActivity" android:exported="true" />
 
     </application>
 
-
 </manifest>
-
-

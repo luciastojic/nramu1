@@ -1,9 +1,11 @@
+var enabled: Boolean = false
 
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
 }
+
 
 android {
     namespace = "com.example.myapplication"
@@ -17,7 +19,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
+
+
 
     buildTypes {
         release {
@@ -44,4 +50,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation ("com.google.android.material:material:1.6.0")
+
+
 }

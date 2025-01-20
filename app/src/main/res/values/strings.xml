@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name" />
+    <string name="add_new_item" />
+    <string name="item_name_hint" />
+    <string name="item_model_hint" />
+    <string name="quantity_hint" />
+    <string name="save_button" />
+    <string name="add_image_button" />
+    <string name="user_name" />
+    <string name="user_email" />
 </resources>
