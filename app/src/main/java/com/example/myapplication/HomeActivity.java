@@ -39,9 +39,6 @@ public class HomeActivity extends AppCompatActivity {
         // Inicijaliziraj DrawerLayout, NavigationView i Toolbar
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
-        toolbar = findViewById(R.id.toolbar);
-
-        setSupportActionBar(toolbar);
 
         // Klik listener za otvaranje izbornika
         ImageView menuIcon = findViewById(R.id.menuIcon);
