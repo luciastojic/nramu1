@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Poveži dugme iz MainActivity za LOGIN
         Button loginButton = findViewById(R.id.button);
+        loginButton.setBackgroundResource(R.drawable.button_selector);  // Primjeni selektor
+        loginButton.setTextColor(getResources().getColor(R.color.white));  // Postavi boju teksta
 
         // Dodaj OnClickListener za dugme LOGIN
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Poveži dugme iz MainActivity za REGISTER
         Button registerButton = findViewById(R.id.button2);  // Poveži dugme REGISTER (id button2)
+        registerButton.setBackgroundResource(R.drawable.button_selector);  // Primjeni selektor
+        registerButton.setTextColor(getResources().getColor(R.color.white));  // Postavi boju teksta
 
         // Dodaj OnClickListener za dugme REGISTER
         registerButton.setOnClickListener(new View.OnClickListener() {
