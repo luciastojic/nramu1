@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.Manifest;
+import android.view.View;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -68,6 +69,7 @@ public class HomeActivity extends AppCompatActivity {
         partQuantity = findViewById(R.id.partQuantity);
         ImageView increaseButton = findViewById(R.id.increaseButton);
         ImageView decreaseButton = findViewById(R.id.decreaseButton);
+        ImageView deleteButton = findViewById(R.id.deleteButton); // Ikona za brisanje
 
         // Postavljanje listenera za ikonu za povećanje
         increaseButton.setOnClickListener(v -> {
@@ -82,11 +84,27 @@ public class HomeActivity extends AppCompatActivity {
                 updateQuantity();  // Ažuriraj prikaz količine
             }
         });
+
+        // Postavljanje listenera za ikonu za brisanje
+        deleteButton.setOnClickListener(v -> {
+            quantity = 0;  // Postavi količinu na 0
+            updateQuantity();  // Ažuriraj prikaz količine
+
+            // Logika za skrivanje dugmadi nakon brisanja
+            increaseButton.setVisibility(View.GONE);
+            decreaseButton.setVisibility(View.GONE);
+            deleteButton.setVisibility(View.GONE);
+            partQuantity.setText("Item Deleted"); // Postavi tekst na "Item Deleted"
+        });
     }
 
     // Metoda za ažuriranje prikaza količine na ekranu
     private void updateQuantity() {
-        partQuantity.setText("Quantity: " + quantity);  // Ažuriraj tekst sa novom količinom
+        if (quantity == 0) {
+            partQuantity.setText("Out of Stock");
+        } else {
+            partQuantity.setText("Quantity: " + quantity);
+        }
     }
 
     // Obrada odgovora na zahtjev za dozvolu
