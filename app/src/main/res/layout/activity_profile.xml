@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-    <!-- Profilna slika -->
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="120dp"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Gumb za izmjenu profilne slike -->
     <Button
         android:id="@+id/changeProfileImageButton"
         android:layout_width="wrap_content"
@@ -29,7 +27,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Ime korisnika -->
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
@@ -42,7 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Email korisnika -->
     <TextView
         android:id="@+id/userEmail"
         android:layout_width="wrap_content"
@@ -54,7 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Gumb za uređivanje osobnih podataka -->
     <Button
         android:id="@+id/editProfileButton"
         android:layout_width="wrap_content"
@@ -65,7 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Gumb za promjenu lozinke -->
     <Button
         android:id="@+id/changePasswordButton"
         android:layout_width="wrap_content"

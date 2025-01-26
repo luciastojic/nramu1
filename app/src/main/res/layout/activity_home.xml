@@ -7,12 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <!-- Main content of the screen -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Header -->
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
@@ -38,7 +36,6 @@
                 android:src="@drawable/ic_menu" />
         </LinearLayout>
 
-        <!-- Search and Sorting -->
         <LinearLayout
             android:id="@+id/searchSection"
             android:layout_width="match_parent"
@@ -49,13 +46,14 @@
 
             <EditText
                 android:id="@+id/searchBar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
                 android:hint="Search"
                 android:padding="8dp"
-                android:minHeight="48dp"
-                android:background="@drawable/search_background" />
+                android:drawableEnd="@drawable/ic_search"
+                android:drawablePadding="8dp"
+                android:minHeight="30dp"/>
+
 
             <ImageView
                 android:id="@+id/sortIcon"
@@ -66,18 +64,18 @@
                 android:layout_marginStart="8dp" />
         </LinearLayout>
 
-        <!-- Product Section -->
         <LinearLayout
             android:id="@+id/mobilePartContainer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
             android:orientation="vertical"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/searchSection">
 
-            <!-- Image of the mobile part -->
             <ImageView
                 android:id="@+id/partImage"
                 android:layout_width="100dp"
@@ -86,7 +84,6 @@
                 android:contentDescription="Mobile part image"
                 android:src="@drawable/ic_part_image" />
 
-            <!-- Part Name -->
             <TextView
                 android:id="@+id/partName"
                 android:layout_width="wrap_content"
@@ -96,7 +93,6 @@
                 android:text="Mobile Part Name"
                 android:textSize="18sp" />
 
-            <!-- Part Quantity -->
             <TextView
                 android:id="@+id/partQuantity"
                 android:layout_width="wrap_content"
@@ -106,7 +102,6 @@
                 android:text="Quantity: 10"
                 android:textSize="16sp" />
 
-            <!-- Action Buttons -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,7 +109,6 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <!-- Decrease Button -->
                 <ImageView
                     android:id="@+id/decreaseButton"
                     android:layout_width="40dp"
@@ -122,7 +116,6 @@
                     android:contentDescription="Decrease quantity"
                     android:src="@drawable/ic_minus" />
 
-                <!-- Increase Button -->
                 <ImageView
                     android:id="@+id/increaseButton"
                     android:layout_width="40dp"
@@ -132,7 +125,6 @@
                     android:src="@drawable/ic_plus" />
             </LinearLayout>
 
-            <!-- Delete and Edit Buttons -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,7 +132,6 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <!-- Edit Button -->
                 <ImageView
                     android:id="@+id/editButton"
                     android:layout_width="40dp"
@@ -161,11 +152,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/drawer_menu" />
+        app:menu="@menu/navigation_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

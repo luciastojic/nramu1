@@ -18,19 +18,16 @@ public class ChangePasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        // Inicijalizacija elemenata iz layout-a
         EditText currentPassword = findViewById(R.id.currentPassword);
         EditText newPassword = findViewById(R.id.newPassword);
         EditText confirmPassword = findViewById(R.id.confirmPassword);
         Button savePasswordButton = findViewById(R.id.savePasswordButton);
 
-        // Postavljanje OnClickListener za gumb "Spremi"
         savePasswordButton.setOnClickListener(view -> {
             String current = currentPassword.getText().toString();
             String newPass = newPassword.getText().toString();
             String confirmPass = confirmPassword.getText().toString();
 
-            // Validacija korisničkog unosa
             if (current.isEmpty() || newPass.isEmpty() || confirmPass.isEmpty()) {
                 Toast.makeText(this, "Sva polja su obavezna!", Toast.LENGTH_SHORT).show();
             } else if (!newPass.equals(confirmPass)) {
@@ -38,7 +35,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
             } else if (newPass.length() < 6) {
                 Toast.makeText(this, "Lozinka mora imati najmanje 6 znakova!", Toast.LENGTH_SHORT).show();
             } else {
-                // Ažuriranje lozinke
                 updatePassword(current, newPass);
             }
         });
@@ -51,10 +47,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
         if (user != null) {
             AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), currentPassword);
 
-            // Ponovna autentifikacija
             user.reauthenticate(credential).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
-                    // Promjena lozinke
                     user.updatePassword(newPassword).addOnCompleteListener(updateTask -> {
                         if (updateTask.isSuccessful()) {
                             Toast.makeText(this, "Lozinka uspješno promijenjena!", Toast.LENGTH_SHORT).show();

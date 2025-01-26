@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".EditProfileActivity">
 
-    <!-- Polje za unos imena -->
     <EditText
         android:id="@+id/editName"
         android:layout_width="0dp"
@@ -20,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Polje za unos email adrese -->
     <EditText
         android:id="@+id/editEmail"
         android:layout_width="0dp"
@@ -34,7 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editName" />
 
-    <!-- Gumb za spremanje promjena -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"

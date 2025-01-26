@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AddNewItemActivity">
 
-    <!-- Ikona plus za dodavanje slike (Premještena na vrh) -->
     <ImageView
         android:id="@+id/plusImage"
         android:layout_width="48dp"
@@ -19,7 +18,6 @@
     android:layout_marginTop="20dp"
     android:layout_centerHorizontal="true" />
 
-    <!-- Tekst za odabir slike (Camera or Gallery) ispod plus ikone -->
     <TextView
         android:id="@+id/selectImageText"
         android:layout_width="wrap_content"
@@ -32,7 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_centerHorizontal="true" />
 
-    <!-- Naslov "Add New Item" -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -46,7 +43,6 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
 
-    <!-- Polje za unos naziva -->
     <EditText
         android:id="@+id/itemName"
         android:layout_width="0dp"
@@ -61,7 +57,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
-    <!-- Polje za unos modela -->
     <EditText
         android:id="@+id/itemModel"
         android:layout_width="0dp"
@@ -76,7 +71,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemName" />
 
-    <!-- Polje za unos količine -->
     <EditText
         android:id="@+id/itemQuantity"
         android:layout_width="0dp"
@@ -91,7 +85,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemModel" />
 
-    <!-- Dugme za spremanje novog dijela -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
