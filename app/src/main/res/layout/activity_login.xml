@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/logoImageView"
-        android:layout_width="157dp"
-        android:layout_height="147dp"
+        android:layout_width="206dp"
+        android:layout_height="178dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/login_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,29 +19,14 @@
 
 
     <TextView
-        android:id="@+id/partsManagerText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/fontjedan"
-        android:text="Parts Manager"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoImageView" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="112dp"
         android:text="EMAIL"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoImageView" />
 
@@ -67,12 +52,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="PASSWORD"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editEmailText" />
 
@@ -99,7 +84,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/edit_text_bg"
         android:text="LOGIN"
