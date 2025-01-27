@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
     <!-- Glavni sadržaj -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -64,71 +63,18 @@
             app:layout_constraintStart_toEndOf="@id/searchBar"
             app:layout_constraintTop_toTopOf="@id/searchBar" />
 
-        <LinearLayout
-            android:id="@+id/mobilePartContainer"
+        <!-- ListView to display parts -->
+        <ListView
+            android:id="@+id/listview"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="40dp"
-            android:orientation="vertical"
-            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchBar">
-
-            <!-- Image of the mobile part -->
-            <ImageView
-                android:id="@+id/partImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:contentDescription="Mobile part image"
-                android:src="@drawable/ic_part_image" /> <!-- Placeholder part image -->
-
-            <!-- Part Name -->
-            <TextView
-                android:id="@+id/partName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:text="Mobile Part Name"
-                android:textSize="18sp" />
-
-            <!-- Part Quantity -->
-            <TextView
-                android:id="@+id/partQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:text="Quantity: 10"
-                android:textSize="16sp" />
-
-            <!-- Quantity Adjust Buttons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/decreaseButton"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:contentDescription="Decrease quantity"
-                    android:src="@drawable/ic_minus" />
-
-                <ImageView
-                    android:id="@+id/increaseButton"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:contentDescription="Increase quantity"
-                    android:src="@drawable/ic_plus" />
-            </LinearLayout>
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/searchBar"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

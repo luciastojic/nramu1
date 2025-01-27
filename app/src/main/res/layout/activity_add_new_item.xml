@@ -6,35 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".AddNewItemActivity">
 
+    <!-- ImageView za odabir slike -->
     <ImageView
         android:id="@+id/plusImage"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/ic_add"
-    android:contentDescription="Add Image"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginTop="20dp"
-    android:layout_centerHorizontal="true" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
 
+
+    <!-- Tekst koji uputi korisnika da odabere sliku -->
     <TextView
         android:id="@+id/selectImageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Image (Camera or Gallery)"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/plusImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_centerHorizontal="true" />
 
+    <!-- Naslov forme -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_new_item"
+        android:text="Add New Item"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/selectImageText"
@@ -43,6 +47,7 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
 
+    <!-- Polje za unos imena predmeta -->
     <EditText
         android:id="@+id/itemName"
         android:layout_width="0dp"
@@ -57,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
+    <!-- Polje za unos modela predmeta -->
     <EditText
         android:id="@+id/itemModel"
         android:layout_width="0dp"
@@ -71,6 +77,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemName" />
 
+    <!-- Polje za unos količine predmeta -->
     <EditText
         android:id="@+id/itemQuantity"
         android:layout_width="0dp"
@@ -85,6 +92,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemModel" />
 
+    <!-- Button za spremanje podataka -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"

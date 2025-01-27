@@ -10,6 +10,8 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
@@ -51,8 +53,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     user.updatePassword(newPassword).addOnCompleteListener(updateTask -> {
                         if (updateTask.isSuccessful()) {
-                            Toast.makeText(this, "Lozinka uspješno promijenjena!", Toast.LENGTH_SHORT).show();
-                            finish(); // Povratak na prethodni ekran
+                            // After updating password, update the password in the Realtime Database as well
+                            updatePasswordInDatabase(newPassword);
                         } else {
                             Toast.makeText(this, "Greška pri promjeni lozinke!", Toast.LENGTH_SHORT).show();
                         }
@@ -63,4 +65,20 @@ public class ChangePasswordActivity extends AppCompatActivity {
             });
         }
     }
+
+    private void updatePasswordInDatabase(String newPassword) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = database.getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+        // Assuming the Users class has a setter for the password
+        userRef.child("password").setValue(newPassword).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Toast.makeText(this, "Lozinka uspješno promijenjena!", Toast.LENGTH_SHORT).show();
+                finish(); // Close this activity
+            } else {
+                Toast.makeText(this, "Greška pri ažuriranju lozinke u bazi podataka!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 }

@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import java.util.List;
@@ -52,10 +54,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.PartsViewHol
 
         public PartsViewHolder(View itemView) {
             super(itemView);
-            nameTextView = itemView.findViewById(R.id.nameTextView);
-            modelTextView = itemView.findViewById(R.id.modelTextView);
             quantityTextView = itemView.findViewById(R.id.quantityTextView);
-            imageView = itemView.findViewById(R.id.imageView);
         }
     }
 }
