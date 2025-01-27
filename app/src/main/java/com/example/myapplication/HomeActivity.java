@@ -57,32 +57,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        partQuantity = findViewById(R.id.partQuantity);
-        ImageView increaseButton = findViewById(R.id.increaseButton);
-        ImageView decreaseButton = findViewById(R.id.decreaseButton);
-        ImageView deleteButton = findViewById(R.id.deleteButton); // Ikona za brisanje
 
-        increaseButton.setOnClickListener(v -> {
-            quantity++;
-            updateQuantity();
-        });
 
-        decreaseButton.setOnClickListener(v -> {
-            if (quantity > 0) {
-                quantity--;
-                updateQuantity();
-            }
-        });
-
-        deleteButton.setOnClickListener(v -> {
-            quantity = 0;
-            updateQuantity();
-
-            increaseButton.setVisibility(View.GONE);
-            decreaseButton.setVisibility(View.GONE);
-            deleteButton.setVisibility(View.GONE);
-            partQuantity.setText("Item Deleted");
-        });
     }
 
     private void updateQuantity() {
