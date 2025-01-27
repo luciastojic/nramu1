@@ -6,42 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-    <!-- Profilna slika -->
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="50dp"
         android:src="@drawable/ic_profile"
-        android:layout_centerHorizontal="true"
+        android:contentDescription="Profile Picture"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Ime korisnika -->
+    <Button
+        android:id="@+id/changeProfileImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promijeni sliku"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user_name"
-    android:textSize="20sp"
-    android:layout_marginTop="20dp"
-    app:layout_constraintTop_toBottomOf="@id/profileImage"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_centerHorizontal="true" />
+        android:text="Ime i Prezime"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/changeProfileImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Email korisnika -->
     <TextView
         android:id="@+id/userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user_email"
-    android:textSize="16sp"
-    android:layout_marginTop="10dp"
-    app:layout_constraintTop_toBottomOf="@id/userName"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_centerHorizontal="true" />
+        android:text="email@example.com"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/editProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uredi profil"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/userEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/changePasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promijeni lozinku"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/editProfileButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

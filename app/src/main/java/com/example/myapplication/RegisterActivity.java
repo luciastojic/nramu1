@@ -51,13 +51,11 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (!password.equals(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Logika za registraciju (npr. spremanje u bazu ili slanje na server)
                     Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
 
-                    // Prebacivanje na LoginActivity
                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
-                    finish();  // Završava trenutnu aktivnost
+                    finish();
                 }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
@@ -71,7 +69,6 @@ public class RegisterActivity extends AppCompatActivity {
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    // If sign in fails, display a message to the user.
                                     Toast.makeText(RegisterActivity.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }
@@ -79,9 +76,9 @@ public class RegisterActivity extends AppCompatActivity {
                         });
             }
         });
-    }  // Zatvarajuća zagrada za onCreate metodu
+    }
 
-}  // Zatvarajuća zagrada za RegisterActivity klasu
+}
 
 
 
