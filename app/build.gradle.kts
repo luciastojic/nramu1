@@ -23,8 +23,6 @@ android {
 
     }
 
-
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -48,10 +46,11 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation ("com.google.android.material:material:1.6.0")
-
-
+    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
+    implementation("com.github.bumptech.glide:glide:4.15.1")  // or latest version
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 }
