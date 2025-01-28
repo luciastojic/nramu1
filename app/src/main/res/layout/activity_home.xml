@@ -53,17 +53,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appName" />
 
+        <!-- ListView to display parts -->
         <ImageView
             android:id="@+id/sortIcon"
             android:layout_width="47dp"
             android:layout_height="46dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
             android:src="@drawable/ic_sort"
             app:layout_constraintStart_toEndOf="@id/searchBar"
             app:layout_constraintTop_toTopOf="@id/searchBar" />
 
-        <!-- ListView to display parts -->
         <ListView
             android:id="@+id/listview"
             android:layout_width="0dp"
