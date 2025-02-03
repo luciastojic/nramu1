@@ -50,6 +50,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.caverock:androidsvg:1.4")
     implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
     implementation("com.github.bumptech.glide:glide:4.15.1")  // or latest version
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
