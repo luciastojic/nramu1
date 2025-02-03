@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blur_blue_green"
     tools:context=".AddNewItemActivity">
 
     <!-- ImageView za odabir slike -->
@@ -98,9 +99,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F57EB"
         app:layout_constraintTop_toBottomOf="@id/itemQuantity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+              />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

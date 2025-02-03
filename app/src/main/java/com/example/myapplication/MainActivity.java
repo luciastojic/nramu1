@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         Button loginButton = findViewById(R.id.button);
-        loginButton.setBackgroundResource(R.drawable.button_selector);  // Primjeni selektor
         loginButton.setTextColor(getResources().getColor(R.color.white));  // Postavi boju teksta
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button registerButton = findViewById(R.id.button2);  // Poveži dugme REGISTER (id button2)
-        registerButton.setBackgroundResource(R.drawable.button_selector);  // Primjeni selektor
         registerButton.setTextColor(getResources().getColor(R.color.white));  // Postavi boju teksta
 
         registerButton.setOnClickListener(new View.OnClickListener() {

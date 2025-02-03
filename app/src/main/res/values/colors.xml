@@ -1,6 +1,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="pressed_color">#000000</color>  <!-- Boja kada je gumb pritisnut -->
-    <color name="default_color">#000000</color>  <!-- Boja kada gumb nije pritisnut -->
+    <color name="pressed_color">#312D2D</color>
+    <color name="default_color">#000000</color>
+    <color name="dividerColor">#5E33AB</color>
+    <color name="buttonBackgroundColor">#5592A5</color>
 </resources>

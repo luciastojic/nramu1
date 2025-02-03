@@ -40,31 +40,33 @@
 
             <Button
                 android:id="@+id/decreaseButton"
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:text="−"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/increaseButton"
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:text="+"
                 android:textSize="18sp"
                 android:layout_marginStart="8dp" />
 
-            <Button
-                android:id="@+id/deleteButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:contentDescription="Delete Item"
-                android:drawableStart="@drawable/ic_delete"
-                android:text="Delete"
-                android:textSize="12sp" />
-
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Delete Item"
+        android:drawableStart="@drawable/ic_delete"
+        android:text="Delete"
+        android:backgroundTint="#3F57EB"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="464dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

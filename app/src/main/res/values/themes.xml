@@ -1,19 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/default_color</item>
         <item name="colorAccent">@color/default_color</item>
-
-        <!-- Definiraj stil za gumb -->
-        <item name="buttonStyle">@style/MyButtonStyle</item>
     </style>
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
-
-    <!-- Stil za gumb -->
-    <style name="MyButtonStyle">
-        <item name="android:background">@drawable/button_selector</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
 </resources>
