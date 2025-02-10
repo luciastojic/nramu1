@@ -37,6 +37,10 @@ Users can easily add, delete, and update parts directly in the database, ensurin
 
 **Screenshots**
 
+![Screenshot_20250210_105541 (1)](https://github.com/user-attachments/assets/b9b0935d-a511-444e-9463-982903636adc)
+![Screenshot_20250210_110901](https://github.com/user-attachments/assets/77a80006-f85e-49ea-93a0-697e8284a204)
+![WhatsApp Image 2025-02-10 at 10 39 24 (3)](https://github.com/user-attachments/assets/e9cae501-43de-4b21-a439-a45c7aab3d91)
+![Screenshot_20250210_110933](https://github.com/user-attachments/assets/7460735f-5d83-4f2e-b49b-97e88ae1ec64)
 
 ****Key Code Snippets****
 
