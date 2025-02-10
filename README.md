@@ -1,4 +1,5 @@
 ****Parts Manager****
+
 A mobile application that allows users to efficiently track and manage spare parts for various mobile phones. 
 Users can easily add, delete, and update parts directly in the database, ensuring streamlined inventory management.
 
@@ -35,7 +36,8 @@ Users can easily add, delete, and update parts directly in the database, ensurin
     - Select a part to update its quantity or delete it.
 
 **Screenshots**
-![WhatsApp Image 2025-02-10 at 10 39 24](https://github.com/user-attachments/assets/a2c2f9f8-8248-495f-9e5a-0f0ce92fe0f3)
+
+![Screenshot_20250210_105541](https://github.com/user-attachments/assets/9ed73678-3c6c-4029-8eaf-06cc6d5620ba)
 
 ![WhatsApp Image 2025-02-10 at 10 39 24 (1)](https://github.com/user-attachments/assets/40258506-0021-46ac-bf32-214b3472e03f)
 
