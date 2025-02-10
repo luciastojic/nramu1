@@ -41,6 +41,7 @@ Users can easily add, delete, and update parts directly in the database, ensurin
 ****Key Code Snippets****
 
 **Adding a New Part to Firebase:**
+
   DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("items");
   String itemId = databaseReference.push().getKey();
   databaseReference.child(itemId).setValue(newPart);
