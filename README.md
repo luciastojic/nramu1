@@ -37,7 +37,7 @@ Users can easily add, delete, and update parts directly in the database, ensurin
 
 **Screenshots**
 
-![Screenshot_20250210_105541](https://github.com/user-attachments/assets/9ed73678-3c6c-4029-8eaf-06cc6d5620ba)
+<img src="(https://github.com/user-attachments/assets/9ed73678-3c6c-4029-8eaf-06cc6d5620ba)" alt="Sample Image" style="width:50%; height:auto;">
 
 ![WhatsApp Image 2025-02-10 at 10 39 24 (1)](https://github.com/user-attachments/assets/40258506-0021-46ac-bf32-214b3472e03f)
 
