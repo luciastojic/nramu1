@@ -13,6 +13,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- ImageView for displaying item image -->
+        <ImageView
+            android:id="@+id/itemImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_part_image"
+         />
+
         <TextView
             android:id="@+id/itemTextView"
             android:layout_width="match_parent"

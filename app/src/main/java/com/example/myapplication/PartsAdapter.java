@@ -4,57 +4,54 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import models.Parts;
 
-public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.PartsViewHolder> {
-
+public class PartsAdapter extends ArrayAdapter<Parts> {
     private Context context;
-    private List<Parts> partsList;
+    private List<Parts> partList;
 
-    public void setFilteredList(List<Parts> filteredList){
-        this.partsList = filteredList;
-        notifyDataSetChanged();
-    }
-    public PartsAdapter(Context context, List<Parts> partsList) {
+    public PartsAdapter(Context context, List<Parts> partList) {
+        super(context, 0, partList);
         this.context = context;
-        this.partsList = partsList;
+        this.partList = partList;
     }
 
     @Override
-    public PartsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.part_item, parent, false);
-        return new PartsViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(PartsViewHolder holder, int position) {
-        Parts part = partsList.get(position);
-        holder.nameTextView.setText(part.getName());
-        holder.modelTextView.setText(part.getModel());
-        holder.quantityTextView.setText("Quantity: " + part.getQuantity());
-    }
-
-    @Override
-    public int getItemCount() {
-        return partsList.size();
-    }
-
-    public static class PartsViewHolder extends RecyclerView.ViewHolder {
-
-        TextView nameTextView, modelTextView, quantityTextView;
-        ImageView imageView;
-
-        public PartsViewHolder(View itemView) {
-            super(itemView);
-            quantityTextView = itemView.findViewById(R.id.quantityTextView);
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.part_item, parent, false);
         }
+
+        // Get the current part
+        Parts part = getItem(position);
+
+        // Populate the views with data
+        TextView nameTextView = convertView.findViewById(R.id.part_name);
+        TextView modelTextView = convertView.findViewById(R.id.part_model);
+        TextView quantityTextView = convertView.findViewById(R.id.part_quantity);
+        ImageView imageView = convertView.findViewById(R.id.part_image);
+
+        nameTextView.setText(part.getName());
+        modelTextView.setText(part.getModel());
+        quantityTextView.setText("Quantity: " + part.getQuantity());
+
+        // Učitavanje slike sa URL-a koristeći Picasso
+        String imageUrl = part.getImageUrl();
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            Picasso.get().load(imageUrl).into(imageView);
+        } else {
+            imageView.setImageResource(R.drawable.ic_plus); // Default image if no URL
+        }
+
+        return convertView;
     }
 }
