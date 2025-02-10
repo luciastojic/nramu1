@@ -37,25 +37,20 @@ Users can easily add, delete, and update parts directly in the database, ensurin
 
 **Screenshots**
 
-<img src="![Screenshot_20250210_105541](https://github.com/user-attachments/assets/40bb5b4b-9b0d-43d9-8619-ad76b28239f9)" alt="Sample Image" style="width:50%; height:auto;">
-
-
-![WhatsApp Image 2025-02-10 at 10 39 24 (1)](https://github.com/user-attachments/assets/40258506-0021-46ac-bf32-214b3472e03f)
-
-![WhatsApp Image 2025-02-10 at 10 39 24 (2)](https://github.com/user-attachments/assets/35adfa09-51fe-4704-a0db-5cab54dcd336)
-
-![WhatsApp Image 2025-02-10 at 10 39 24 (3)](https://github.com/user-attachments/assets/d031d0a0-c6c4-41e1-aa80-345ef254c9dc)
-
-![WhatsApp Image 2025-02-10 at 10 39 24 (4) (1)](https://github.com/user-attachments/assets/3242277c-a9a4-43cc-abe3-c16bb5a71251)
 
 ****Key Code Snippets****
+
 **Adding a New Part to Firebase:**
   DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("items");
   String itemId = databaseReference.push().getKey();
   databaseReference.child(itemId).setValue(newPart);
+  
 **Loading Images Using Picasso:**
+
   Picasso.get().load(imageUrl).into(imageView);
+  
 **Login:**
+
   mAuth.signInWithEmailAndPassword(email, password)
     .addOnCompleteListener(task -> {
         if (task.isSuccessful()) {
